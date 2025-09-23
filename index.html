@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Посвящение в Школу 21</title>
+    
+    <!-- Подключение CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Подключение AOS для анимаций при скролле -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    
+    <!-- Подключение Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Подключение шрифтов -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Прелоадер -->
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="loader-logo">Peer2Peer Present</div>
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Кнопка управления звуком -->
+    <button id="sound-toggle">
+        <i class="fas fa-volume-mute"></i>
+    </button>
+
+    <!-- Главный экран -->
+    <section id="hero">
+        <video id="hero-video" autoplay muted loop>
+            <!-- Замените src на ваше видео -->
+            <source src="assets/video/hero.mp4" type="video/mp4">
+            Ваш браузер не поддерживает видео.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title" data-aos="fade-down">Посвящение в Школу 21</h1>
+            <p class="hero-subtitle" data-aos="fade-down" data-aos-delay="200">Самая ожидаемая тусовка года!</p>
+            <p class="hero-date" data-aos="fade-down" data-aos-delay="400">25 октября 2025</p>
+            <p class="hero-location" data-aos="fade-down" data-aos-delay="600">Казань, "Фабрика Алафузова"</p>
+            <div class="cta-buttons">
+                <a href="https://t.me/kcaraway_bot" class="btn btn-primary" data-aos="zoom-in" data-aos-delay="800">Купить билеты</a>
+                <a href="#about" class="btn btn-secondary" data-aos="zoom-in" data-aos-delay="1000">Узнать подробности</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция "О мероприятии" -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">О мероприятии</h2>
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <p>Приветствуем новых участников Школы 21! Мы рады пригласить вас на нашу традиционную вечеринку-посвящение, где вы сможете познакомиться с сокурсниками, пообщаться с менторами и погрузиться в уникальную атмосферу нашего сообщества.</p>
+                    <p>Вас ждут захватывающие активности, конкурсы с призами, живая музыка и, конечно же, море общения с такими же увлеченными программированием людьми, как и вы.</p>
+                    <p>Это отличная возможность отдохнуть после интенсивного пула и зарядиться энергией для новых свершений в мире IT!</p>
+                </div>
+                <div data-aos="fade-left">
+                    <!-- Замените src на ваше изображение -->
+                    <img src="assets/images/DSC00771.JPG" alt="Мероприятие Школа 21" class="about-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция "Детали" -->
+    <section id="details" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Детали мероприятия</h2>
+            <div class="details-grid">
+                <div class="detail-card" data-aos="flip-left">
+                    <div class="detail-icon">
+                        <i class="far fa-calendar-alt"></i>
+                    </div>
+                    <h3 class="detail-title">Дата и время</h3>
+                    <p>25 октября 2025<br>Начало в 18:00</p>
+                </div>
+                <div class="detail-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="detail-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="detail-title">Место</h3>
+                    <p>Казань, Фабрика "Алафузова"<br>ул. Гладилова, д. 55А</p>
+                </div>
+                <div class="detail-card" data-aos="flip-left" data-aos-delay="400">
+                    <div class="detail-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3 class="detail-title">Дресс-код</h3>
+                    <p>IT-Casual<br>Комфортная одежда с элементами хоррора. Приз за лучший костюм!</p>
+                </div>
+                <div class="detail-card" data-aos="flip-left" data-aos-delay="600">
+                    <div class="detail-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="detail-title">Участники</h3>
+                    <p>Новые студенты Школы 21,<br>команда АДМ и действующие участники Школы 21</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция с таймером -->
+    <section id="countdown" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">До мероприятия осталось</h2>
+            <div class="countdown-container">
+                <div class="countdown-item" data-aos="zoom-in">
+                    <span id="days" class="countdown-value">00</span>
+                    <span class="countdown-label">Дней</span>
+                </div>
+                <div class="countdown-item" data-aos="zoom-in" data-aos-delay="100">
+                    <span id="hours" class="countdown-value">00</span>
+                    <span class="countdown-label">Часов</span>
+                </div>
+                <div class="countdown-item" data-aos="zoom-in" data-aos-delay="200">
+                    <span id="minutes" class="countdown-value">00</span>
+                    <span class="countdown-label">Минут</span>
+                </div>
+                <div class="countdown-item" data-aos="zoom-in" data-aos-delay="300">
+                    <span id="seconds" class="countdown-value">00</span>
+                    <span class="countdown-label">Секунд</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция с галереей -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Посмотри, как было раньше</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-aos="fade-up">
+                    <!-- Замените src на ваше изображение -->
+                    <img src="assets/images/DSC00600.JPG" alt="Посвят" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <p>Весна 2025</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/images/DSC00960.JPG" alt="Посвят" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <p>Весна 2025</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/images/DSC00905.JPG" alt="Посвят" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <p>Весна 2025</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция контактов -->
+    <section id="contacts" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Свяжитесь с нами</h2>
+            <p data-aos="fade-up" data-aos-delay="200">Есть вопросы? Скорее пиши нам в чат:)!</p>
+            <div class="social-links">
+                <a href="https://t.me/+WC-FwkpWqgJkOTIy" class="social-link" data-aos="zoom-in" data-aos-delay="300">
+                    <i class="fab fa-telegram"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <p>© 2025 Peer2Peer Agency. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Подключение библиотек -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <!-- Подключение основного скрипта -->
+    <script src="js/script.js"></script>
+</body>
+</html>
