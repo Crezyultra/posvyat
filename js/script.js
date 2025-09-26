@@ -25,7 +25,7 @@ let sound;
 // Инициализация звука
 function initSound() {
     sound = new Howl({
-        src: ['assets/audio/OLIGARKH_-_Forgive_Us.mp3'], // Замените на ваш аудиофайл
+        src: ['assets/audio/Hyper_VIPER_GopStop_TECHNO_KING_-_OIIA_OIIA.mp3'], // аудиофайл
         loop: true,
         volume: 0.5,
         onplayerror: function() {
