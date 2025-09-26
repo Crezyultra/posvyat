@@ -310,7 +310,7 @@ body {
     color: #ccc;
 }
 
-/* Секция с галереей */
+/* Секция с галереей - ИСПРАВЛЕННЫЙ КОД */
 #gallery {
     background: #0a0a0a;
 }
@@ -321,12 +321,16 @@ body {
     gap: 20px;
 }
 
+/* Основные изменения здесь: */
 .gallery-item {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
     height: 250px;
     cursor: pointer;
+    display: block; /* Важно для ссылок! */
+    text-decoration: none; /* Убираем подчеркивание */
+    color: inherit; /* Наследуем цвет текста */
 }
 
 .gallery-img {
@@ -334,6 +338,7 @@ body {
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
+    display: block; /* Убираем лишние отступы */
 }
 
 .gallery-item:hover .gallery-img {
@@ -426,6 +431,10 @@ footer {
     .countdown-value {
         font-size: 2rem;
     }
+    
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
 }
 
 @media (max-width: 480px) {
@@ -452,5 +461,13 @@ footer {
     
     .countdown-value {
         font-size: 1.5rem;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-item {
+        height: 200px;
     }
 }
